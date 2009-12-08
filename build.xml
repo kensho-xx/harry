@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<project name="harry-project" basedir=".">
+<project name="harry-project" basedir="." default="run.standalone.client">
   <property environment="env"/>
 
   <!-- library properties -->

@@ -1,2 +1,29 @@
 Harry - Open Source Human Resources Management System for Small Bussiness
 -------------------------------------------------------------------------
+
+Suggestions:
+   * to work on project create following dir
+        harry_project   (let's call it HARRY_DEV_HOME)
+	`-- harry_repo  (the repository: HARRY_DEV_REPO (this part is placed on GitHub))
+
+   * don't keep your libs in repository, keep them in $HARRY_DEV_HOME/libs dir.
+     (you've received mail with link to libraries - download them and
+      extract in $HARRY_DEV_HOME/libs)
+
+   * hope you have mysql and ant... :( ... if not:
+     $> sudo apt-get install mysql
+     $> sudo apt-get install ant
+
+   * to just run the example please follow this steps:
+     1) as your mysql root create 'admin' user with password: 'admin'
+     2) create schema 'test_harry'
+     3) add all privilleges on 'test_harry' to 'admin' user
+
+     In you're terminal mysql client call:
+     mysql>
+	create database test_harry;
+        grant all on test_harry.* to 'admin'@'localhost';
+	grant all on test_harry.* to 'admin'@'%'
+
+   * run example:
+     $> ant run.standalone.client
